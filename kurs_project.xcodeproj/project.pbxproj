@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE6E392D293C9F6700A0B7EE /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6E392C293C9F6700A0B7EE /* MainScreen.swift */; };
+		CE6E3931293CA82F00A0B7EE /* MedicalTreatmentScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6E3930293CA82F00A0B7EE /* MedicalTreatmentScreen.swift */; };
+		CE6E3935293CA93F00A0B7EE /* CalculateDrugDozeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6E3934293CA93F00A0B7EE /* CalculateDrugDozeScreen.swift */; };
+		CE6E3938293CA9B400A0B7EE /* EatingControlScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6E3937293CA9B400A0B7EE /* EatingControlScreen.swift */; };
+		CE6E393B293CAA3D00A0B7EE /* SugarLevelControlScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6E393A293CAA3D00A0B7EE /* SugarLevelControlScreen.swift */; };
 		CEBBB19C2923C9DD0074B8DC /* kurs_projectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBBB19B2923C9DD0074B8DC /* kurs_projectApp.swift */; };
 		CEBBB19E2923C9DD0074B8DC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBBB19D2923C9DD0074B8DC /* ContentView.swift */; };
 		CEBBB1A02923C9DF0074B8DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEBBB19F2923C9DF0074B8DC /* Assets.xcassets */; };
@@ -36,6 +41,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE6E392C293C9F6700A0B7EE /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
+		CE6E3930293CA82F00A0B7EE /* MedicalTreatmentScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalTreatmentScreen.swift; sourceTree = "<group>"; };
+		CE6E3934293CA93F00A0B7EE /* CalculateDrugDozeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateDrugDozeScreen.swift; sourceTree = "<group>"; };
+		CE6E3937293CA9B400A0B7EE /* EatingControlScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EatingControlScreen.swift; sourceTree = "<group>"; };
+		CE6E393A293CAA3D00A0B7EE /* SugarLevelControlScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SugarLevelControlScreen.swift; sourceTree = "<group>"; };
 		CEBBB1982923C9DD0074B8DC /* kurs_project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kurs_project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEBBB19B2923C9DD0074B8DC /* kurs_projectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kurs_projectApp.swift; sourceTree = "<group>"; };
 		CEBBB19D2923C9DD0074B8DC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -75,6 +85,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE6E392E293CA7C000A0B7EE /* screens */ = {
+			isa = PBXGroup;
+			children = (
+				CE6E3939293CA9E600A0B7EE /* SugarLevelControl */,
+				CE6E3936293CA98500A0B7EE /* EatingControl */,
+				CE6E3933293CA8DF00A0B7EE /* CalculateDrugDoze */,
+				CE6E392F293CA7FB00A0B7EE /* MedicalTreatment */,
+				CE6E392C293C9F6700A0B7EE /* MainScreen.swift */,
+			);
+			path = screens;
+			sourceTree = "<group>";
+		};
+		CE6E392F293CA7FB00A0B7EE /* MedicalTreatment */ = {
+			isa = PBXGroup;
+			children = (
+				CE6E3930293CA82F00A0B7EE /* MedicalTreatmentScreen.swift */,
+			);
+			path = MedicalTreatment;
+			sourceTree = "<group>";
+		};
+		CE6E3933293CA8DF00A0B7EE /* CalculateDrugDoze */ = {
+			isa = PBXGroup;
+			children = (
+				CE6E3934293CA93F00A0B7EE /* CalculateDrugDozeScreen.swift */,
+			);
+			path = CalculateDrugDoze;
+			sourceTree = "<group>";
+		};
+		CE6E3936293CA98500A0B7EE /* EatingControl */ = {
+			isa = PBXGroup;
+			children = (
+				CE6E3937293CA9B400A0B7EE /* EatingControlScreen.swift */,
+			);
+			path = EatingControl;
+			sourceTree = "<group>";
+		};
+		CE6E3939293CA9E600A0B7EE /* SugarLevelControl */ = {
+			isa = PBXGroup;
+			children = (
+				CE6E393A293CAA3D00A0B7EE /* SugarLevelControlScreen.swift */,
+			);
+			path = SugarLevelControl;
+			sourceTree = "<group>";
+		};
 		CEBBB18F2923C9DD0074B8DC = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +152,7 @@
 		CEBBB19A2923C9DD0074B8DC /* kurs_project */ = {
 			isa = PBXGroup;
 			children = (
+				CE6E392E293CA7C000A0B7EE /* screens */,
 				CEBBB19B2923C9DD0074B8DC /* kurs_projectApp.swift */,
 				CEBBB19D2923C9DD0074B8DC /* ContentView.swift */,
 				CEBBB19F2923C9DF0074B8DC /* Assets.xcassets */,
@@ -263,9 +318,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE6E3935293CA93F00A0B7EE /* CalculateDrugDozeScreen.swift in Sources */,
 				CEBBB1A82923C9DF0074B8DC /* kurs_project.xcdatamodeld in Sources */,
+				CE6E392D293C9F6700A0B7EE /* MainScreen.swift in Sources */,
+				CE6E3931293CA82F00A0B7EE /* MedicalTreatmentScreen.swift in Sources */,
 				CEBBB1A52923C9DF0074B8DC /* Persistence.swift in Sources */,
+				CE6E3938293CA9B400A0B7EE /* EatingControlScreen.swift in Sources */,
 				CEBBB19E2923C9DD0074B8DC /* ContentView.swift in Sources */,
+				CE6E393B293CAA3D00A0B7EE /* SugarLevelControlScreen.swift in Sources */,
 				CEBBB19C2923C9DD0074B8DC /* kurs_projectApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
