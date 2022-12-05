@@ -12,7 +12,7 @@ import SwiftUI
 struct MainScreen : View {
     
     var body: some View {
-        NavigationView {
+        NavigationView{
             List {
                     NavigationLink(destination: SugarLevelControlScreen()) {
                         Text("Мониторинг Глюкозы")
@@ -26,8 +26,7 @@ struct MainScreen : View {
                     NavigationLink(destination: MedicalTreatmentScreen()) {
                         Text("График обследований")
                     }
-                }
-            .navigationTitle("Sugar Control")
+                }.navigationTitle("Sugar Control")
         }
     }
 }
