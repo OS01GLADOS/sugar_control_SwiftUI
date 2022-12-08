@@ -43,6 +43,8 @@ struct CalculateDrugDozeScreen: View {
         guard input != nil  else {
               return
             }
+        
+        
         res = input!
         DrugDozeResult = String(format: "%.2f mg", res)
     }
