@@ -13,9 +13,7 @@ struct kurs_projectApp: App {
     //add  views here
     var body: some Scene {
         WindowGroup {
-            //ContentView()
-             //  .environment(\.managedObjectContext, persistenceController.container.viewContext)
-            MainScreen().environment(\.managedObjectContext, persistenceController.container.viewContext)
+            MainScreen()
         }
     }
 }

@@ -12,9 +12,3 @@ struct SugarLevelControlScreen: View {
         Text("Экран контроля уровня сахара")
     }
 }
-
-struct SugarLevelControlScreen_Previews: PreviewProvider {
-    static var previews: some View {
-        SugarLevelControlScreen()
-    }
-}

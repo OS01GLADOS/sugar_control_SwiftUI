@@ -10,76 +10,121 @@ import Foundation
 import SwiftUI
 
 struct MedicalTreatmentScreen: View {
+    private var suffix = "каб."
+    @StateObject private var notificationManager = NotificationManager()
+    @State private var isCreatePresented = false
     
-    @Environment(\.managedObjectContext) private var viewContext
-
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
-        animation: .default)
-    private var items: FetchedResults<Item>
+    private static var notificationDateFormatter: DateFormatter = {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd.MM, HH:mm"
+        return dateFormatter
+    }()
     
-        var body: some View {
-
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-                    } label: {
-                        Text(item.timestamp!, formatter: itemFormatter)
+    private func timeDisplayText(from notification: UNNotificationRequest) -> String {
+        guard let nextTriggerDate = (notification.trigger as? UNCalendarNotificationTrigger)?.nextTriggerDate() else { return "" }
+        return Self.notificationDateFormatter.string(from: nextTriggerDate)
+    }
+    
+    @ViewBuilder
+    var infoOverlayView: some View {
+        switch notificationManager.authorizationStatus {
+        case .authorized:
+            if notificationManager.getSpecificNotifications(suffix: suffix).isEmpty {
+                InfoOverlayView(
+                    infoMessage: "Обследований не запланировано",
+                    buttonTitle: "Создать новое",
+                    systemImageName: "plus.circle",
+                    action: {
+                        isCreatePresented = true
+                    }
+                )
+            }
+        case .denied:
+            InfoOverlayView(
+                infoMessage: "Пожалуйста, включите уведомления для использования данной фунуции",
+                buttonTitle: "Перейти к настройкам",
+                systemImageName: "gear",
+                action: {
+                    if let url = URL(string: UIApplication.openSettingsURLString), UIApplication.shared.canOpenURL(url) {
+                        UIApplication.shared.open(url, options: [:], completionHandler: nil)
                     }
                 }
-                .onDelete(perform: deleteItems)
-            }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: addItems) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
-            }
-            .navigationTitle("График обследований")
-            
-        }
-    private func addItems() {
-        withAnimation {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
+            )
+        default:
+            EmptyView()
         }
     }
     
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            offsets.map { items[$0] }.forEach(viewContext.delete)
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+    var body: some View {
+        List {
+            ForEach(notificationManager.getSpecificNotifications(suffix: suffix), id: \.identifier) { notification in
+                VStack(alignment: .leading){
+                    HStack {
+                    Text(notification.content.title)
+                        .fontWeight(.semibold)
+                    Text(timeDisplayText(from: notification))
+                        .fontWeight(.bold)
+                    Spacer()
+                    }
+                    Text(notification.content.body)
+                }
+                    
+            }
+            .onDelete(perform: delete)
+            switch notificationManager.authorizationStatus {
+            case .authorized:
+                if !notificationManager.getSpecificNotifications(suffix: suffix).isEmpty {
+                    HStack{
+                        Image(systemName: "info.circle").foregroundColor(.blue)
+                        Text("Смахните влево для удаления").foregroundColor(.blue)
+                    }
+                }
+                default:
+                    EmptyView()
             }
         }
+        .listStyle(InsetGroupedListStyle())
+        .overlay(infoOverlayView)
+        .navigationTitle("Обследования")
+        .onAppear(perform: notificationManager.reloadAuthorizationStatus)
+        .onChange(of: notificationManager.authorizationStatus) { authorizationStatus in
+            switch authorizationStatus {
+            case .notDetermined:
+                notificationManager.requestAuthorization()
+            case .authorized:
+                notificationManager.reloadLocalNotifications()
+            default:
+                break
+            }
+        }
+        .onReceive(NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification)) { _ in
+            notificationManager.reloadAuthorizationStatus()
+        }
+        .navigationBarItems(trailing: Button {
+            isCreatePresented = true
+        } label: {
+            Image(systemName: "plus.circle")
+                .imageScale(.large)
+        })
+        .sheet(isPresented: $isCreatePresented) {
+            NavigationView {
+                CreateNotificationView(
+                    notificationManager: notificationManager,
+                    isPresented: $isCreatePresented
+                )
+            }
+            .accentColor(.primary)
+        }
     }
-    
-    
 }
 
-private let itemFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.dateStyle = .short
-    formatter.timeStyle = .medium
-    return formatter
-}()
+extension MedicalTreatmentScreen {
+    func delete(_ indexSet: IndexSet) {
+        notificationManager.deleteLocalNotifications(
+            identifiers: indexSet.map { notificationManager.notifications[$0].identifier }
+        )
+        notificationManager.reloadLocalNotifications()
+    }
+}
+
+
