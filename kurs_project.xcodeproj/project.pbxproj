@@ -31,6 +31,7 @@
 		CEE9EBC32948A8060008A862 /* DBViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE9EBC22948A8060008A862 /* DBViewModel.swift */; };
 		CEE9EBC52948B86E0008A862 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE9EBC42948B86E0008A862 /* Card.swift */; };
 		CEE9EBC72948D1040008A862 /* SugarLevelNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE9EBC62948D1040008A862 /* SugarLevelNotifications.swift */; };
+		CEE9EBC92948E1270008A862 /* SugarNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE9EBC82948E1270008A862 /* SugarNotification.swift */; };
 		F4D2B32474F526A6E5CE9635 /* libPods-kurs_project.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 961997539EF9C476F8D0B146 /* libPods-kurs_project.a */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +85,7 @@
 		CEE9EBC22948A8060008A862 /* DBViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBViewModel.swift; sourceTree = "<group>"; };
 		CEE9EBC42948B86E0008A862 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		CEE9EBC62948D1040008A862 /* SugarLevelNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SugarLevelNotifications.swift; sourceTree = "<group>"; };
+		CEE9EBC82948E1270008A862 /* SugarNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SugarNotification.swift; sourceTree = "<group>"; };
 		DA3B7200B452958A2979BD6F /* Pods-kurs_project-kurs_projectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kurs_project-kurs_projectUITests.release.xcconfig"; path = "Target Support Files/Pods-kurs_project-kurs_projectUITests/Pods-kurs_project-kurs_projectUITests.release.xcconfig"; sourceTree = "<group>"; };
 		FF6F6558D79205C9ED247074 /* libPods-kurs_project-kurs_projectUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-kurs_project-kurs_projectUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -269,6 +271,7 @@
 		CEE478B729489C59005187A1 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				CEE9EBC82948E1270008A862 /* SugarNotification.swift */,
 				CE6E393A293CAA3D00A0B7EE /* SugarLevelControlScreen.swift */,
 				CEE9EBC02948A6BC0008A862 /* AddNoteView.swift */,
 				CEE9EBC62948D1040008A862 /* SugarLevelNotifications.swift */,
@@ -479,6 +482,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEE9EBC92948E1270008A862 /* SugarNotification.swift in Sources */,
 				CEE9EBC32948A8060008A862 /* DBViewModel.swift in Sources */,
 				CE6E3935293CA93F00A0B7EE /* CalculateDrugDozeScreen.swift in Sources */,
 				CEE4849729475E160034D70F /* CreateNotificationView.swift in Sources */,

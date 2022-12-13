@@ -41,9 +41,10 @@ final class NotificationManager: ObservableObject {
         }
     }
     
-    func createLocalNotification(title: String, dateComponents: DateComponents, body:String = "Напоминание", completion: @escaping (Error?) -> Void) {
+    func createLocalNotification(title: String, dateComponents: DateComponents, body:String = "Напоминание",
+                                 repeats:Bool=false, completion: @escaping (Error?) -> Void) {
         
-        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: repeats)
         
         let notificationContent = UNMutableNotificationContent()
         notificationContent.title = title
