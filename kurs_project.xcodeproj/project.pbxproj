@@ -27,6 +27,10 @@
 		CEE4849529475D6B0034D70F /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE4849429475D6B0034D70F /* NotificationManager.swift */; };
 		CEE4849729475E160034D70F /* CreateNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE4849629475E160034D70F /* CreateNotificationView.swift */; };
 		CEE4849929475E700034D70F /* InfoOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE4849829475E700034D70F /* InfoOverlayView.swift */; };
+		CEE9EBC12948A6BC0008A862 /* AddNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE9EBC02948A6BC0008A862 /* AddNoteView.swift */; };
+		CEE9EBC32948A8060008A862 /* DBViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE9EBC22948A8060008A862 /* DBViewModel.swift */; };
+		CEE9EBC52948B86E0008A862 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE9EBC42948B86E0008A862 /* Card.swift */; };
+		CEE9EBC72948D1040008A862 /* SugarLevelNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE9EBC62948D1040008A862 /* SugarLevelNotifications.swift */; };
 		F4D2B32474F526A6E5CE9635 /* libPods-kurs_project.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 961997539EF9C476F8D0B146 /* libPods-kurs_project.a */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +80,10 @@
 		CEE4849429475D6B0034D70F /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		CEE4849629475E160034D70F /* CreateNotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNotificationView.swift; sourceTree = "<group>"; };
 		CEE4849829475E700034D70F /* InfoOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoOverlayView.swift; sourceTree = "<group>"; };
+		CEE9EBC02948A6BC0008A862 /* AddNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteView.swift; sourceTree = "<group>"; };
+		CEE9EBC22948A8060008A862 /* DBViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBViewModel.swift; sourceTree = "<group>"; };
+		CEE9EBC42948B86E0008A862 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		CEE9EBC62948D1040008A862 /* SugarLevelNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SugarLevelNotifications.swift; sourceTree = "<group>"; };
 		DA3B7200B452958A2979BD6F /* Pods-kurs_project-kurs_projectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kurs_project-kurs_projectUITests.release.xcconfig"; path = "Target Support Files/Pods-kurs_project-kurs_projectUITests/Pods-kurs_project-kurs_projectUITests.release.xcconfig"; sourceTree = "<group>"; };
 		FF6F6558D79205C9ED247074 /* libPods-kurs_project-kurs_projectUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-kurs_project-kurs_projectUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -173,7 +181,9 @@
 		CE6E3939293CA9E600A0B7EE /* SugarLevelControl */ = {
 			isa = PBXGroup;
 			children = (
-				CE6E393A293CAA3D00A0B7EE /* SugarLevelControlScreen.swift */,
+				CEE478B729489C59005187A1 /* view */,
+				CEE478B629489C46005187A1 /* viewModel */,
+				CEE478B529489C3B005187A1 /* model */,
 			);
 			path = SugarLevelControl;
 			sourceTree = "<group>";
@@ -238,6 +248,32 @@
 				CEBBB1BD2923C9DF0074B8DC /* kurs_projectUITestsLaunchTests.swift */,
 			);
 			path = kurs_projectUITests;
+			sourceTree = "<group>";
+		};
+		CEE478B529489C3B005187A1 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				CEE9EBC42948B86E0008A862 /* Card.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		CEE478B629489C46005187A1 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CEE9EBC22948A8060008A862 /* DBViewModel.swift */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		CEE478B729489C59005187A1 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				CE6E393A293CAA3D00A0B7EE /* SugarLevelControlScreen.swift */,
+				CEE9EBC02948A6BC0008A862 /* AddNoteView.swift */,
+				CEE9EBC62948D1040008A862 /* SugarLevelNotifications.swift */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -443,15 +479,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEE9EBC32948A8060008A862 /* DBViewModel.swift in Sources */,
 				CE6E3935293CA93F00A0B7EE /* CalculateDrugDozeScreen.swift in Sources */,
 				CEE4849729475E160034D70F /* CreateNotificationView.swift in Sources */,
 				CEBBB1A82923C9DF0074B8DC /* kurs_project.xcdatamodeld in Sources */,
 				CE6E392D293C9F6700A0B7EE /* MainScreen.swift in Sources */,
+				CEE9EBC12948A6BC0008A862 /* AddNoteView.swift in Sources */,
 				CEE4849529475D6B0034D70F /* NotificationManager.swift in Sources */,
+				CEE9EBC52948B86E0008A862 /* Card.swift in Sources */,
 				CEE4849929475E700034D70F /* InfoOverlayView.swift in Sources */,
 				CE6E3931293CA82F00A0B7EE /* MedicalTreatmentScreen.swift in Sources */,
 				CEBBB1A52923C9DF0074B8DC /* Persistence.swift in Sources */,
 				CE6E3938293CA9B400A0B7EE /* EatingControlScreen.swift in Sources */,
+				CEE9EBC72948D1040008A862 /* SugarLevelNotifications.swift in Sources */,
 				CEBBB19E2923C9DD0074B8DC /* ContentView.swift in Sources */,
 				CE6E393B293CAA3D00A0B7EE /* SugarLevelControlScreen.swift in Sources */,
 				CEBBB19C2923C9DD0074B8DC /* kurs_projectApp.swift in Sources */,
