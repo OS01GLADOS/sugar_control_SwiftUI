@@ -29,6 +29,7 @@
 		CEBBB1B22923C9DF0074B8DC /* kurs_projectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBBB1B12923C9DF0074B8DC /* kurs_projectTests.swift */; };
 		CEBBB1BC2923C9DF0074B8DC /* kurs_projectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBBB1BB2923C9DF0074B8DC /* kurs_projectUITests.swift */; };
 		CEBBB1BE2923C9DF0074B8DC /* kurs_projectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBBB1BD2923C9DF0074B8DC /* kurs_projectUITestsLaunchTests.swift */; };
+		CED6D7C5294B6FCC00CF7EF4 /* calculateLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED6D7C4294B6FCC00CF7EF4 /* calculateLogic.swift */; };
 		CEE4849529475D6B0034D70F /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE4849429475D6B0034D70F /* NotificationManager.swift */; };
 		CEE4849729475E160034D70F /* CreateNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE4849629475E160034D70F /* CreateNotificationView.swift */; };
 		CEE4849929475E700034D70F /* InfoOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE4849829475E700034D70F /* InfoOverlayView.swift */; };
@@ -88,6 +89,7 @@
 		CEBBB1B72923C9DF0074B8DC /* kurs_projectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kurs_projectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEBBB1BB2923C9DF0074B8DC /* kurs_projectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kurs_projectUITests.swift; sourceTree = "<group>"; };
 		CEBBB1BD2923C9DF0074B8DC /* kurs_projectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kurs_projectUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CED6D7C4294B6FCC00CF7EF4 /* calculateLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calculateLogic.swift; sourceTree = "<group>"; };
 		CEE4849429475D6B0034D70F /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		CEE4849629475E160034D70F /* CreateNotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNotificationView.swift; sourceTree = "<group>"; };
 		CEE4849829475E700034D70F /* InfoOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoOverlayView.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				CE6E3934293CA93F00A0B7EE /* CalculateDrugDozeScreen.swift */,
+				CED6D7C4294B6FCC00CF7EF4 /* calculateLogic.swift */,
 			);
 			path = CalculateDrugDoze;
 			sourceTree = "<group>";
@@ -524,6 +527,7 @@
 				CEE9EBC12948A6BC0008A862 /* AddNoteView.swift in Sources */,
 				CEE4849529475D6B0034D70F /* NotificationManager.swift in Sources */,
 				CE9ADDF5294B2254002FB2A2 /* DataModels.swift in Sources */,
+				CED6D7C5294B6FCC00CF7EF4 /* calculateLogic.swift in Sources */,
 				CEE9EBC52948B86E0008A862 /* Card.swift in Sources */,
 				CEE4849929475E700034D70F /* InfoOverlayView.swift in Sources */,
 				CE6E3931293CA82F00A0B7EE /* MedicalTreatmentScreen.swift in Sources */,
@@ -695,8 +699,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"kurs_project/Preview Content\"";
-				ENABLE_PREVIEWS = YES;
+				ENABLE_PREVIEWS = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -725,8 +728,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"kurs_project/Preview Content\"";
-				ENABLE_PREVIEWS = YES;
+				ENABLE_PREVIEWS = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
