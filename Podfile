@@ -6,6 +6,7 @@ target 'kurs_project' do
   
   pod 'SwiftyJSON'
   pod 'RealmSwift'
+  pod 'Alamofire'
 
 
   target 'kurs_projectTests' do

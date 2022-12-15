@@ -15,6 +15,8 @@
 		CE6E3938293CA9B400A0B7EE /* EatingControlScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6E3937293CA9B400A0B7EE /* EatingControlScreen.swift */; };
 		CE6E393B293CAA3D00A0B7EE /* SugarLevelControlScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6E393A293CAA3D00A0B7EE /* SugarLevelControlScreen.swift */; };
 		CE7936542941F594004E921C /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = CE7936522941F594004E921C /* Podfile */; };
+		CE9ADDF3294B192D002FB2A2 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9ADDF2294B192D002FB2A2 /* APIManager.swift */; };
+		CE9ADDF5294B2254002FB2A2 /* DataModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9ADDF4294B2254002FB2A2 /* DataModels.swift */; };
 		CEBBB19C2923C9DD0074B8DC /* kurs_projectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBBB19B2923C9DD0074B8DC /* kurs_projectApp.swift */; };
 		CEBBB19E2923C9DD0074B8DC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBBB19D2923C9DD0074B8DC /* ContentView.swift */; };
 		CEBBB1A02923C9DF0074B8DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEBBB19F2923C9DF0074B8DC /* Assets.xcassets */; };
@@ -66,6 +68,8 @@
 		CE6E3937293CA9B400A0B7EE /* EatingControlScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EatingControlScreen.swift; sourceTree = "<group>"; };
 		CE6E393A293CAA3D00A0B7EE /* SugarLevelControlScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SugarLevelControlScreen.swift; sourceTree = "<group>"; };
 		CE7936522941F594004E921C /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		CE9ADDF2294B192D002FB2A2 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		CE9ADDF4294B2254002FB2A2 /* DataModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModels.swift; sourceTree = "<group>"; };
 		CEBBB1982923C9DD0074B8DC /* kurs_project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kurs_project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEBBB19B2923C9DD0074B8DC /* kurs_projectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kurs_projectApp.swift; sourceTree = "<group>"; };
 		CEBBB19D2923C9DD0074B8DC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -176,6 +180,8 @@
 			isa = PBXGroup;
 			children = (
 				CE6E3937293CA9B400A0B7EE /* EatingControlScreen.swift */,
+				CE9ADDF2294B192D002FB2A2 /* APIManager.swift */,
+				CE9ADDF4294B2254002FB2A2 /* DataModels.swift */,
 			);
 			path = EatingControl;
 			sourceTree = "<group>";
@@ -490,10 +496,12 @@
 				CE6E392D293C9F6700A0B7EE /* MainScreen.swift in Sources */,
 				CEE9EBC12948A6BC0008A862 /* AddNoteView.swift in Sources */,
 				CEE4849529475D6B0034D70F /* NotificationManager.swift in Sources */,
+				CE9ADDF5294B2254002FB2A2 /* DataModels.swift in Sources */,
 				CEE9EBC52948B86E0008A862 /* Card.swift in Sources */,
 				CEE4849929475E700034D70F /* InfoOverlayView.swift in Sources */,
 				CE6E3931293CA82F00A0B7EE /* MedicalTreatmentScreen.swift in Sources */,
 				CEBBB1A52923C9DF0074B8DC /* Persistence.swift in Sources */,
+				CE9ADDF3294B192D002FB2A2 /* APIManager.swift in Sources */,
 				CE6E3938293CA9B400A0B7EE /* EatingControlScreen.swift in Sources */,
 				CEE9EBC72948D1040008A862 /* SugarLevelNotifications.swift in Sources */,
 				CEBBB19E2923C9DD0074B8DC /* ContentView.swift in Sources */,
