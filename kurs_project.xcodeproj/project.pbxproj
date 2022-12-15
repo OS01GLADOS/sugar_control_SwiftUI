@@ -17,6 +17,7 @@
 		CE7936542941F594004E921C /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = CE7936522941F594004E921C /* Podfile */; };
 		CE9ADDF3294B192D002FB2A2 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9ADDF2294B192D002FB2A2 /* APIManager.swift */; };
 		CE9ADDF5294B2254002FB2A2 /* DataModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9ADDF4294B2254002FB2A2 /* DataModels.swift */; };
+		CE9ADDF7294B43E4002FB2A2 /* ShowDiary.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9ADDF6294B43E4002FB2A2 /* ShowDiary.swift */; };
 		CEBBB19C2923C9DD0074B8DC /* kurs_projectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBBB19B2923C9DD0074B8DC /* kurs_projectApp.swift */; };
 		CEBBB19E2923C9DD0074B8DC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBBB19D2923C9DD0074B8DC /* ContentView.swift */; };
 		CEBBB1A02923C9DF0074B8DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEBBB19F2923C9DF0074B8DC /* Assets.xcassets */; };
@@ -70,6 +71,7 @@
 		CE7936522941F594004E921C /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		CE9ADDF2294B192D002FB2A2 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		CE9ADDF4294B2254002FB2A2 /* DataModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModels.swift; sourceTree = "<group>"; };
+		CE9ADDF6294B43E4002FB2A2 /* ShowDiary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDiary.swift; sourceTree = "<group>"; };
 		CEBBB1982923C9DD0074B8DC /* kurs_project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kurs_project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEBBB19B2923C9DD0074B8DC /* kurs_projectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kurs_projectApp.swift; sourceTree = "<group>"; };
 		CEBBB19D2923C9DD0074B8DC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 				CE6E3937293CA9B400A0B7EE /* EatingControlScreen.swift */,
 				CE9ADDF2294B192D002FB2A2 /* APIManager.swift */,
 				CE9ADDF4294B2254002FB2A2 /* DataModels.swift */,
+				CE9ADDF6294B43E4002FB2A2 /* ShowDiary.swift */,
 			);
 			path = EatingControl;
 			sourceTree = "<group>";
@@ -504,6 +507,7 @@
 				CE9ADDF3294B192D002FB2A2 /* APIManager.swift in Sources */,
 				CE6E3938293CA9B400A0B7EE /* EatingControlScreen.swift in Sources */,
 				CEE9EBC72948D1040008A862 /* SugarLevelNotifications.swift in Sources */,
+				CE9ADDF7294B43E4002FB2A2 /* ShowDiary.swift in Sources */,
 				CEBBB19E2923C9DD0074B8DC /* ContentView.swift in Sources */,
 				CE6E393B293CAA3D00A0B7EE /* SugarLevelControlScreen.swift in Sources */,
 				CEBBB19C2923C9DD0074B8DC /* kurs_projectApp.swift in Sources */,

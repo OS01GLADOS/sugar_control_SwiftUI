@@ -10,7 +10,8 @@ import SwiftUI
 import Alamofire
 import SwiftyJSON
 
-struct EatingControlScreen: View {
+struct AddDataToDiary: View {
+    @Binding var isPresented: Bool
     @StateObject private var apiManager = ApiManager()
     @State var fieldInput: [String: String] = [:]
     @State private var name = ""
@@ -38,10 +39,28 @@ struct EatingControlScreen: View {
                     }
                 }
             }
-            
+            Button {
+                DispatchQueue.main.async {
+                    self.isPresented = false
+                }
+            } label: {
+                    Text("Создать")
+                        .fontWeight(.semibold)
+                        .frame(maxWidth: .infinity)
+                        .contentShape(Rectangle())
+                }
         }
         .onAppear(perform: apiManager.get_data)
         .navigationTitle("Добавить запись")
+        .toolbar{
+            ToolbarItem(placement: .navigationBarLeading){
+                Button(action:{
+                    DispatchQueue.main.async {
+                        self.isPresented = false
+                    }
+                }, label: {Text("Отмена")})
+            }
+        }
     }
        
     
