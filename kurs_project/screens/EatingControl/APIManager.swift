@@ -18,7 +18,6 @@ final class ApiManager: ObservableObject{
         let url = "https://virtserver.swaggerhub.com/OS01GLADOS/bread_number/1.0.0/"
         AF.request(url).responseDecodable(of: [JsonItem].self){ response in
             self.data = try! response.result.get()
-            debugPrint(self.data)
         }
     }
 }

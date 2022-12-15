@@ -12,7 +12,6 @@ struct CathegoryItem: Codable{
     let count_on_XE: Int?
     let count_name: String?
     let extra_info: String?
-    let amount: Int = 0
 }
 
 struct JsonItem: Codable{

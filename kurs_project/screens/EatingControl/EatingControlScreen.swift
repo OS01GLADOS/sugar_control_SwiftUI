@@ -12,17 +12,36 @@ import SwiftyJSON
 
 struct EatingControlScreen: View {
     @StateObject private var apiManager = ApiManager()
+    @State var fieldInput: [String: String] = [:]
+    @State private var name = ""
+    
+    private func binding(for key: String) -> Binding<String> {
+        return .init(
+            get: { self.fieldInput[key, default: ""] },
+            set: { self.fieldInput[key] = $0 })
+    }
+    
+    
     var body: some View {
         List{
             ForEach(apiManager.data, id: \.cathegory){item in
-                Section(header: Text(item.cathegory!)){
+                DisclosureGroup(item.cathegory!){
                     ForEach(item.items, id: \.name){dataItem in
-                        Text(dataItem.name!)
+                        DisclosureGroup(dataItem.name!){
+                            if ((dataItem.extra_info!) != ""){
+                                Text("Одной ХЕ примерно соответствует \(dataItem.extra_info!)")
+                            }
+                            Text("Введите количество съеденных продуктов в \"\(dataItem.count_name!)\"")
+                            TextField("0", text: binding(for: "\(item.cathegory!)_\(dataItem.name!)"))
+
+                        }
                     }
                 }
             }
-        }.onAppear(perform: apiManager.get_data)
-            .navigationTitle("Дневник Питания")
+            
+        }
+        .onAppear(perform: apiManager.get_data)
+        .navigationTitle("Добавить запись")
     }
        
     
