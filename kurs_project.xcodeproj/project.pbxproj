@@ -18,6 +18,8 @@
 		CE9ADDF3294B192D002FB2A2 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9ADDF2294B192D002FB2A2 /* APIManager.swift */; };
 		CE9ADDF5294B2254002FB2A2 /* DataModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9ADDF4294B2254002FB2A2 /* DataModels.swift */; };
 		CE9ADDF7294B43E4002FB2A2 /* ShowDiary.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9ADDF6294B43E4002FB2A2 /* ShowDiary.swift */; };
+		CE9ADDFA294B53E7002FB2A2 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9ADDF9294B53E7002FB2A2 /* Note.swift */; };
+		CE9ADDFD294B548B002FB2A2 /* NoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9ADDFC294B548B002FB2A2 /* NoteViewModel.swift */; };
 		CEBBB19C2923C9DD0074B8DC /* kurs_projectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBBB19B2923C9DD0074B8DC /* kurs_projectApp.swift */; };
 		CEBBB19E2923C9DD0074B8DC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBBB19D2923C9DD0074B8DC /* ContentView.swift */; };
 		CEBBB1A02923C9DF0074B8DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEBBB19F2923C9DF0074B8DC /* Assets.xcassets */; };
@@ -72,6 +74,8 @@
 		CE9ADDF2294B192D002FB2A2 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		CE9ADDF4294B2254002FB2A2 /* DataModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModels.swift; sourceTree = "<group>"; };
 		CE9ADDF6294B43E4002FB2A2 /* ShowDiary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDiary.swift; sourceTree = "<group>"; };
+		CE9ADDF9294B53E7002FB2A2 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		CE9ADDFC294B548B002FB2A2 /* NoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewModel.swift; sourceTree = "<group>"; };
 		CEBBB1982923C9DD0074B8DC /* kurs_project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kurs_project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEBBB19B2923C9DD0074B8DC /* kurs_projectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kurs_projectApp.swift; sourceTree = "<group>"; };
 		CEBBB19D2923C9DD0074B8DC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -181,6 +185,8 @@
 		CE6E3936293CA98500A0B7EE /* EatingControl */ = {
 			isa = PBXGroup;
 			children = (
+				CE9ADDFB294B545E002FB2A2 /* viewModel */,
+				CE9ADDF8294B53CC002FB2A2 /* model */,
 				CE6E3937293CA9B400A0B7EE /* EatingControlScreen.swift */,
 				CE9ADDF2294B192D002FB2A2 /* APIManager.swift */,
 				CE9ADDF4294B2254002FB2A2 /* DataModels.swift */,
@@ -197,6 +203,22 @@
 				CEE478B529489C3B005187A1 /* model */,
 			);
 			path = SugarLevelControl;
+			sourceTree = "<group>";
+		};
+		CE9ADDF8294B53CC002FB2A2 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				CE9ADDF9294B53E7002FB2A2 /* Note.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		CE9ADDFB294B545E002FB2A2 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CE9ADDFC294B548B002FB2A2 /* NoteViewModel.swift */,
+			);
+			path = viewModel;
 			sourceTree = "<group>";
 		};
 		CEBBB18F2923C9DD0074B8DC = {
@@ -493,6 +515,8 @@
 			files = (
 				CEE9EBC92948E1270008A862 /* SugarNotification.swift in Sources */,
 				CEE9EBC32948A8060008A862 /* DBViewModel.swift in Sources */,
+				CE9ADDFD294B548B002FB2A2 /* NoteViewModel.swift in Sources */,
+				CE9ADDFA294B53E7002FB2A2 /* Note.swift in Sources */,
 				CE6E3935293CA93F00A0B7EE /* CalculateDrugDozeScreen.swift in Sources */,
 				CEE4849729475E160034D70F /* CreateNotificationView.swift in Sources */,
 				CEBBB1A82923C9DF0074B8DC /* kurs_project.xcdatamodeld in Sources */,

@@ -9,11 +9,15 @@ import SwiftUI
 
 struct EatingControlScreen: View {
     
+    @StateObject var modelData = NoteViewModel()
     @State private var isCreatePresented = false
     
     var body: some View {
         List{
-            
+            ForEach(modelData.notes){note in
+                Text(note.food_eaten)
+            }
+                
         }
         .navigationTitle("Дневник питания")
         .navigationBarItems(trailing: Button {
@@ -26,7 +30,7 @@ struct EatingControlScreen: View {
             NavigationView {
                 AddDataToDiary(
                     isPresented: $isCreatePresented
-                )
+                ).environmentObject(modelData)
             }
             .accentColor(.primary)
         }

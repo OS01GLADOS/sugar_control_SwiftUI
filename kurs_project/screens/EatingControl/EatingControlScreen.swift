@@ -12,6 +12,7 @@ import SwiftyJSON
 
 struct AddDataToDiary: View {
     @Binding var isPresented: Bool
+    @EnvironmentObject var modelData: NoteViewModel
     @StateObject private var apiManager = ApiManager()
     @State var fieldInput: [String: String] = [:]
     @State private var name = ""
@@ -33,14 +34,28 @@ struct AddDataToDiary: View {
                                 Text("Одной ХЕ примерно соответствует \(dataItem.extra_info!)")
                             }
                             Text("Введите количество съеденных продуктов в \"\(dataItem.count_name!)\"")
-                            TextField("0", text: binding(for: "\(item.cathegory!)_\(dataItem.name!)"))
+                            TextField("0", text: binding(for: "\(dataItem.name!)"))
 
                         }
                     }
                 }
             }
             Button {
-                DispatchQueue.main.async {
+                var XE = 0.0
+                var res = 0.0
+                for(item) in apiManager.data{
+                    for dataItem in item.items{
+                        if (fieldInput.keys.contains(dataItem.name!)) {
+                            res = Double(fieldInput[dataItem.name!]!)! / Double(dataItem.count_on_XE!)
+                            XE += res
+                        }
+                    }
+                }
+                var eatenFood = fieldInput.keys.joined(separator: " ")
+                debugPrint("all eaten food: \(eatenFood), XE: \(XE)")
+                // call save function
+                 modelData.addData(food_eaten: eatenFood, XE: XE)
+                 DispatchQueue.main.async {
                     self.isPresented = false
                 }
             } label: {
